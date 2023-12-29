@@ -1,0 +1,70 @@
+// -----------------------
+// Breakpoints
+// -----------------------
+$breakpoint-lg: 1440px;
+$breakpoint-sm: 375px;
+
+
+// -----------------------
+// Colors
+// -----------------------
+
+$color-primary: hsl(180, 29%, 50%);
+$color-light-bg-cyan: hsl(180, 52%, 96%);
+$color-light-cyan: hsl(180, 31%, 95%);
+$color-dark-cyan: hsl(180, 8%, 52%);
+$color-darker-cyan: hsl(180, 8%, 52%);
+
+// -----------------------
+// Font Family
+// -----------------------
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+$ff-league-spartan: 'League Spartan', sans-serif;
+
+// -----------------------
+// Globals
+// -----------------------
+html{
+    font-size: 15px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $ff-league-spartan;
+}
+
+.header{
+    svg{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.custom-flex{
+    display: flex;
+    align-items: center;
+}
+.main{
+    max-width: 1440px;
+    margin: auto;   
+}
+
+.job{
+    @extend .custom-flex;
+
+    justify-content: space-between;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        &__top, &__footer{
+            @extend .custom-flex;
+
+        }
+    }
+
+    &__tags, &__techs{
+            @extend .custom-flex;
+
+    }
+}
